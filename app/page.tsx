@@ -1,3 +1,5 @@
+"use client"
+
 import Navbar from "./components/Navbar"
 import Link from "next/link"
 import Image from "next/image";
@@ -12,12 +14,19 @@ import PricingCard from "./components/PricingCard";
 import Footer from "./components/Footer";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return(
     <main>
       <Navbar/>
       <FloatingWhatsapp/>
+      <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+
+    >
       <section id="Home" className="h-screen top-0 flex justify-center items-center">
         <div className="absolute -z-50">
           <Image
@@ -36,8 +45,15 @@ export default function Home() {
             <Link href={'#pricelist'} className="rounded-full inset-shadow-sm inset-shadow-blue-100 hover:inset-shadow-blue-300 transition-all hover:bg-blue-600 flex items-center gap-2 hover:gap-4 bg-blue-500 text-white py-3 px-4">Buat Website Sekarang<FaArrowRight/></Link>
         </div>
       </section>
+      
+    </motion.div>
       {/* sedikit pemanis */}
-      <section className="min-h-[80vh] max-md:p-5 mt-5 bg-white flex justify-center items-center">
+      <motion.div
+  initial={{ opacity: 0, y: 100 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }} // true = animasi cuma sekali, false = animasi ulang tiap scroll up/down
+  transition={{ duration: 1.0 }}
+> <section className="min-h-[80vh] max-md:p-5 mt-5 bg-white flex justify-center items-center">
         <div className="flex max-md:flex-col-reverse justify-around items-center">
           <div className="flex flex-col gap-2">
              <h1 className="text-5xl max-md:text-3xl max-md:mt-5 max-w-3xl text-blue-600 mb-2">Tanpa website
@@ -59,6 +75,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+</motion.div>
       {/* keunggulan */}
       <section id="keunggulan-kami" className="min-h-[90vh] mt-12 flex flex-col gap-14 items-center">
         <div className="flex flex-col items-center gap-2">
