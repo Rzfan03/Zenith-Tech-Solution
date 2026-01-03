@@ -7,7 +7,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white/90 backdrop-blur-md z-50 sticky top-0 flex justify-around items-center h-20 w-full border-b border-gray-100 px-4">
+        <nav className="bg-white/90 backdrop-blur-md z-50 sticky top-0 flex justify-around max-md:justify-between items-center h-20 w-full border-b border-gray-100 px-4">
             <div>
                 <h1 className="bg-gradient-to-r from-blue-600 to-blue-400 text-3xl text-transparent bg-clip-text font-extrabold">Zenith</h1>
             </div>
