@@ -10,22 +10,57 @@ import { HiOutlineGlobeAlt } from "react-icons/hi";
 import { TfiStatsUp } from "react-icons/tfi";
 import PricingCard from "./components/PricingCard";
 import Footer from "./components/Footer";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import FloatingWhatsapp from "./components/FloatingWhatsapp";
 
 export default function Home() {
   return(
     <main>
       <Navbar/>
-      <section id="Home" className="h-[90vh] flex justify-center items-center">
+      <FloatingWhatsapp/>
+      <section id="Home" className="h-screen top-0 flex justify-center items-center">
+        <div className="absolute -z-50">
+          <Image
+          src={'https://img.freepik.com/free-vector/gray-abstract-wireframe-background_53876-99911.jpg?semt=ais_hybrid&w=740&q=80'}
+          height={1000}
+          width={1000}
+          alt="home-bg"
+          className="h-screen w-screen object-cover"
+          />
+        </div>
         <div className="flex flex-col gap-10 justify-center items-center">
           <div>
-            <h1 className=" max-md:text-3xl max-md:max-w-2xl text-5xl text-center max-w-5xl bg-gradient-to-r text-transparent from-blue-600 to-blue-400 bg-clip-text font-extrabold">Capek Balas Chat Satu-Satu? Biar Website yang Jualan, Anda Tinggal Terima Beres.</h1>
+            <h1 className=" max-md:text-3xl max-md:max-w-2xl text-5xl text-center max-w-5xl bg-gradient-to-r text-transparent from-sky-600 to-blue-400 bg-clip-text font-extrabold">Capek Balas Chat Satu-Satu? Biar Website yang Jualan, Anda Tinggal Terima Beres.</h1>
             <p className="max-md:text-sm text-lg max-w-5xl text-center mt-2 text-gray-600">Kamu bisa punya website keren yang user friendly, design responsif, optimasi SEO dan domain resmi yang bisa menarik banyak pelanggan ke website mu</p>
           </div>
             <Link href={'#pricelist'} className="rounded-full inset-shadow-sm inset-shadow-blue-100 hover:inset-shadow-blue-300 transition-all hover:bg-blue-600 flex items-center gap-2 hover:gap-4 bg-blue-500 text-white py-3 px-4">Buat Website Sekarang<FaArrowRight/></Link>
         </div>
       </section>
+      {/* sedikit pemanis */}
+      <section className="min-h-[80vh] max-md:p-5 mt-5 bg-white flex justify-center items-center">
+        <div className="flex max-md:flex-col-reverse justify-around items-center">
+          <div className="flex flex-col gap-2">
+             <h1 className="text-5xl max-md:text-3xl max-md:mt-5 max-w-3xl text-blue-600 mb-2">Tanpa website
+             bisnis kamu bisa kehilangan pelanggan
+          </h1>
+            <p className="flex items-center gap-2"><IoMdCheckmarkCircleOutline className="text-blue-700"/> Pelanggan Ragu</p>
+            <p className="flex items-center gap-2"><IoMdCheckmarkCircleOutline className="text-blue-700"/> Bisnis tidak muncul di google</p>
+            <p className="flex items-center gap-2"><IoMdCheckmarkCircleOutline className="text-blue-700"/> Gagal bersaing dari kompetitor lain</p>
+            <p className="flex items-center gap-2"><IoMdCheckmarkCircleOutline className="text-blue-700"/> Informasi bisnis tak lengkap</p>
+          </div>
+          <div>
+            <Image
+          src={'https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_640.jpg'}
+          height={500}
+          width={500}
+          alt="laptop-img"
+          className="rounded-md"
+          />
+          </div>
+        </div>
+      </section>
       {/* keunggulan */}
-      <section id="keunggulan-kami" className="min-h-[90vh] flex flex-col gap-14 items-center">
+      <section id="keunggulan-kami" className="min-h-[90vh] mt-12 flex flex-col gap-14 items-center">
         <div className="flex flex-col items-center gap-2">
           <h1 className="text-5xl max-md:text-3xl font-extrabold bg-gradient-to-r text-transparent from-blue-600 to-blue-400 bg-clip-text">Keunggulan kami</h1>
         <p className="text-gray-500 text-lg ">Fitur lengkap yang kami berikan</p>
@@ -149,8 +184,8 @@ export default function Home() {
       </section>
 
 
-      <section id="testimonial" className="min-h-[70vh] bg-white flex justify-center items-center">
-        <div className="w-5xl max-md:w-90 min-h-90 p-5 border border-gray-300 rounded-md flex justify-between max-md:flex-col-reverse gap-4 items-center">
+      <section id="testimonial" className="min-h-[80vh] bg-gray-50 flex justify-center items-center">
+        <div className="w-5xl max-md:w-90 min-h-90 p-5 bg-white border border-gray-300 rounded-md flex justify-between max-md:flex-col-reverse gap-4 items-center">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col">
                 <h1 className="text-6xl max-w-4xl font-bold">Jadilah <span className="text-blue-500">Klien</span> <span className="text-blue-500">Pertama</span> kami.</h1>
