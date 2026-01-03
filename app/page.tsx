@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-10 justify-center items-center">
           <div>
-            <h1 className=" max-md:text-3xl max-md:max-w-2xl text-5xl text-center max-w-5xl bg-gradient-to-r text-transparent from-sky-600 to-blue-400 bg-clip-text font-extrabold">Capek Balas Chat Satu-Satu? Biar Website yang Jualan, Anda Tinggal Terima Beres.</h1>
+            <h1 className=" max-md:text-3xl max-md:max-w-2xl text-5xl text-center max-w-5xl bg-gradient-to-r text-transparent from-blue-600 to-blue-400 bg-clip-text font-extrabold">Capek Balas Chat Satu-Satu? Biar Website yang Jualan, Anda Tinggal Terima Beres.</h1>
             <p className="max-md:text-sm text-lg max-w-5xl text-center mt-2 text-gray-600">Kamu bisa punya website keren yang user friendly, design responsif, optimasi SEO dan domain resmi yang bisa menarik banyak pelanggan ke website mu</p>
           </div>
             <Link href={'#pricelist'} className="rounded-full inset-shadow-sm inset-shadow-blue-100 hover:inset-shadow-blue-300 transition-all hover:bg-blue-600 flex items-center gap-2 hover:gap-4 bg-blue-500 text-white py-3 px-4">Buat Website Sekarang<FaArrowRight/></Link>
