@@ -23,7 +23,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`fixed top-0 z-50 flex max-md:gap-50 justify-around max-md:justify-between items-center h-20 w-full px-4 transition-all duration-300 ${
+        <nav className={`fixed top-0 z-50 flex max-md:gap-55 justify-around max-md:justify-between items-center h-20 w-full px-4 transition-all duration-300 ${
             isScrolled 
             ? "bg-white border-b border-gray-100 shadow-sm" 
             : "bg-transparent border-b border-transparent"
